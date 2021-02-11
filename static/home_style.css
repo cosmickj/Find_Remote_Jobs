@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Bad Script', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+
+.title-box {
+    position: absolute;
+    margin-top: -20%;
+}
+
+.title-box h1 {
+    margin: 0;
+    padding: 0;
+    color: #111;
+    font-size: 8em;
+}
+
+.title-box h1 span{
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    animation: neon 3.5s linear infinite;
+}
+
+.title-box h1 span:nth-child(1){
+    animation-delay:  0s;
+}
+.title-box h1 span:nth-child(2){
+    animation-delay:  0.25s;
+}
+.title-box h1 span:nth-child(3){
+    animation-delay:  0.5s;
+}
+.title-box h1 span:nth-child(4){
+    animation-delay:  0.75s;
+}
+.title-box h1 span:nth-child(5){
+    animation-delay:  1s;
+}
+.title-box h1 span:nth-child(6){
+    animation-delay:  1.25s;
+}
+.title-box h1 span:nth-child(7){
+    animation-delay:  1.5s;
+}
+.title-box h1 span:nth-child(8){
+    animation-delay:  1.75s;
+}
+.title-box h1 span:nth-child(9){
+    animation-delay:  2s;
+}
+.title-box h1 span:nth-child(10){
+    animation-delay:  2.25s;
+}
+.title-box h1 span:nth-child(11){
+    animation-delay:  2.5s;
+}
+.title-box h1 span:nth-child(12){
+    animation-delay:  2.75s;
+}
+.title-box h1 span:nth-child(13){
+    animation-delay:  3s;
+}
+.title-box h1 span:nth-child(14){
+    animation-delay:  3.25s;
+}
+
+@keyframes neon
+{
+    0%,100%
+    {
+        color: #fff;
+        filter: blur(2px);
+        text-shadow: 0 0 10px aquamarine,
+                     0 0 10px aquamarine,
+                     0 0 10px aquamarine,
+                     0 0 10px aquamarine,
+                     0 0 10px aquamarine,
+                     0 0 10px aquamarine,
+                     0 0 10px aquamarine,
+                     0 0 10px aquamarine,
+                     0 0 10px aquamarine,
+                     0 0 10px aquamarine,
+                     0 0 10px aquamarine,
+                     0 0 10px aquamarine,
+                     0 0 10px aquamarine,
+                     0 0 10px aquamarine;
+    }
+    5%,95%
+    {
+        color: aquamarine;
+        filter: blur(0px);
+        text-shadow: none;
+    }
+}
+
+.search-box {
+    position: absolute;
+    color: aquamarine;
+}
+
+.glowing {
+    position: relative;
+    min-width: 750px;
+    height: 750px;
+    margin: -150px;
+    transform-origin: right;
+    animation: colorChange 5s linear infinite;
+}
+
+.glowing:nth-child(even){
+    transform-origin: left;
+}
+
+@keyframes colorChange{
+    0%
+    {
+        filter: hue-rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        filter: hue-rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.glowing span {
+    position: absolute;
+    top: calc(80px * var(--i));
+    left: calc(80px * var(--i));
+    bottom: calc(80px * var(--i));
+    right: calc(80px * var(--i));
+}
+
+.glowing span::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 15px;
+    height: 15px;
+    background: #f00;
+    border-radius: 50%;
+}
+
+.glowing span:nth-child(3n + 1)::before{
+    background: rgba(134, 255, 0, 1);
+    box-shadow: 0 0 20px rgba(134,255,0,1),
+                0 0 40px rgba(134,255,0,1),
+                0 0 60px rgba(134,255,0,1),
+                0 0 80px rgba(134,255,0,1),
+                0 0 0 8px rgba(134,255,0,.1);
+}
+
+.glowing span:nth-child(3n + 2)::before{
+    background: rgba(255, 214, 0, 1);
+    box-shadow: 0 0 20px rgba(255,214,0,1),
+                0 0 40px rgba(255,214,0,1),
+                0 0 60px rgba(255,214,0,1),
+                0 0 80px rgba(255,214,0,1),
+                0 0 0 8px rgba(255,214,0,.1);
+}
+
+.glowing span:nth-child(3n + 3)::before{
+    background: rgba(0, 226, 255, 1);
+    box-shadow: 0 0 20px rgba(0, 226, 255, 1),
+                0 0 40px rgba(0, 226, 255, 1),
+                0 0 60px rgba(0, 226, 255, 1),
+                0 0 80px rgba(0, 226, 255, 1),
+                0 0 0 8px rgba(0, 226, 255, .1);
+}
+
+.glowing span:nth-child(3n + 1) {
+    animation: animate 10s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 2) {
+    animation: animate-reverse 3s alternate infinite;
+}
+
+.glowing span:nth-child(3n + 3) {
+    animation: animate 8s alternate infinite;
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-reverse {
+    0%
+    {
+        transform: rotate(360deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{url_for('static',filename='home_style.css')}}" rel="stylesheet" type="text/css">
+    <title>FindRemoteJobs | KJ</title>
+</head>
+
+<body>
+    <div class="glowing">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+    </div>
+    <div class="glowing">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+    </div>
+    <div class="glowing">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+    </div>
+    <div class="glowing">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+    </div>
+    <div class="title-box">
+        <h1>
+            <span>F</span>
+            <span>i</span>
+            <span>n</span>
+            <span>d</span>
+            <span>R</span>
+            <span>e</span>
+            <span>m</span>
+            <span>o</span>
+            <span>t</span>
+            <span>e</span>
+            <span>J</span>
+            <span>o</span>
+            <span>b</span>
+            <span>s</span>
+        </h1>
+    </div>
+    <div class="search-box">
+        <form action="/search" method="get">
+            <div>
+                <label for="KEYWORD">Search by term:</label>
+                <input type="text" name="keyword" id="KEYWORD" placeholder="What are you looking for?" required>
+                <input type="submit" value="search">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

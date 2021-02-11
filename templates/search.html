@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{url_for('static',filename='search_style.css')}}">
+	<title>FindRemoteJobs | KJ</title>
+</head>
+
+<body>
+	<div class="head-box">
+		<h1><a href="/">Find Remote Jobs</a></h1>
+		<h3>Total Number of results: {{len_results}}</h3>
+		<a href="/export?keyword={{keyword}}">Download list to CSV</a>
+	</div>
+	<ul>
+    {% for result in full_results %}
+    <li>
+      <span class="title">{{result[0]}}</span>
+      <span class="company">{{result[1]}}</span>
+      <span class="apply"><a target="_blank" href="{{result[2]}}">Apply</a></span>
+    </li>
+    {% endfor %}
+  </ul>
+    <div class="foot-box">
+      <h1></h1>
+    </div>
+</body>
+
+</html>

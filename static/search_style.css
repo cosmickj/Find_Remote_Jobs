@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #000;
+    font-family: 'Bad Script';
+}
+
+.head-box{
+    color: white;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.foot-box{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+ul{
+    position: relative;
+    width: 1200px;
+    margin: 50px auto 0;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgba(255,255,255,.1);
+}
+
+ul li{
+    display: flex;
+    background: rgba(255,255,255,.1);
+    padding: 10px 20px;
+    color: #fff;
+    margin: 5px 0;
+    transition: .5s;
+}
+
+ul li span.title {
+    display: inline-block;
+    text-align: right;
+  }
+
+ul li span {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+  }
+
+ul li:hover{
+    transform: scale(1.06);
+    background: gold;
+}
+
+a{
+    color: aquamarine;
+    text-decoration: none;
+}
